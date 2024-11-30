@@ -1,0 +1,413 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Header Section */
+header {
+    background-color: #ffffff;
+    color: rgb(226, 3, 3);
+    padding: 10px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo img {
+    height: 60px;
+
+}
+
+.nav-bar h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 60px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #8e0e0e;
+    padding: 10px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Navigation Links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Navigation Links */
+nav ul li a:hover {
+    background-color: #b71c1c; 
+    color: #fff; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Dropdown Menu Styles */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b71c1c;
+    top: 40px;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    
+    
+}
+
+nav ul li .dropdown-content li a {
+    padding: 12px 16px;
+    color: #fff;
+    text-decoration: none;
+    
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #880e0e; 
+    color: #fff;
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero1.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    transition: background-image 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Hero Heading Style */
+.hero h2 {
+    font-size: 48px; 
+    font-weight: 600; 
+    margin-bottom: 10px;
+    
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* About Hemophilia Section */
+.about-hemophilia {
+    padding: 60px;
+    background-color: #f0f0f0; /* Soft background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+    margin: 50px auto;
+    max-width: 1200px; /* Keeps content centered and aligned */
+}
+
+/* Heading Styling */
+.about-hemophilia h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #b71c1c; 
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Adding a bottom border under the heading */
+.about-hemophilia h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #b71c1c;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* Article Section: Improved Layout */
+.article {
+    display: flex;
+    gap: 40px; 
+    padding: 20px;
+}
+
+/* Article Text Styling */
+.article p {
+    font-size: 18px;
+    color: #333; 
+    line-height: 1.8; 
+}
+
+/* Article Image Styling */
+.article img {
+    
+    max-width: 300px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
+    transition: transform 0.3s ease; /* Subtle hover effect on the image */
+}
+
+.article img:hover {
+    transform: scale(1.05); 
+}
+
+/* Our Work Section */
+.gallery {
+    padding: 60px 20px; /* Increased padding for more spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+    margin: 50px auto;
+}
+
+.gallery h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #b71c1c; /* Consistent with the theme color */
+    text-align: center;
+    margin-bottom: 30px;
+     padding-bottom: 10px;
+    
+}
+
+/* Adding a bottom border under the heading */
+.gallery h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #b71c1c;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* Photo Grid Layout */
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-items: center; 
+    padding: 20px;
+}
+
+/* Styling for Images */
+.photos img {
+    width: 100%;
+    height: 200px;
+    max-width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hover Effect on Images */
+.photos img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* Registration Section */
+.register {
+    background-image: url('register-bg.jpg');
+    padding: 80px 20px; 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading in Registration Section */
+.register h2 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 42px; /* Increased font size */
+    font-weight: 600; 
+    color: #b61111c5; 
+    margin-bottom: 30px;
+  padding-bottom: 15px;
+   
+}
+
+/* Adding a bottom border under the heading */
+.register h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #ffeb3b; 
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.login-btn {
+    padding: 15px 30px;
+    background-color: #ffeb3b; 
+    border: none;
+    color: #333; 
+    font-size: 20px; 
+    font-family: 'Poppins', sans-serif; 
+    cursor: pointer;
+    border-radius: 25px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+/* Button Hover Effect */
+.login-btn:hover {
+    background-color: #fdd835; 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* About Us Section */
+.about-us {
+    padding: 60px 20px;
+    background-color: #ffffff; 
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 1200px;
+    
+}
+
+/* Heading Styling */
+.about-us h2 {
+    font-size: 36px; 
+    color: #b71c1c; 
+    margin-bottom: 20px;
+     padding-bottom: 15px;
+      font-family: 'Poppins', sans-serif; 
+}
+
+/* Adding a bottom border under the heading */
+.about-us h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #b71c1c; 
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Text Styling */
+.about-us p {
+    font-size: 18px; 
+    color: #333; 
+    line-height: 1.6; 
+    margin-top: 20px;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; 
+    font-family: 'Arial', sans-serif; 
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #b71c1c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Icons */
+.footer-icons {
+    margin-top: 15px;
+}
+
+.footer-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-icons i {
+    margin-right: 8px;
+}
+
+/* Icon Hover Effect */
+.footer-icons a:hover {
+    text-decoration: underline;
+}
+

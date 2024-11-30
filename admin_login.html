@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - JHemophilia</title>
+    <style>
+        /* Styles for the login page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1faee;
+            color: #1d3557;
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #e63946;
+        }
+
+        h2 {
+            color: #e63946;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #457b9d;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e63946;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #d62828;
+        }
+
+        .error-message {
+            color: #e63946;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+
+            <input type="button" value="Login" onclick="validateLogin()">
+        </form>
+        <p class="error-message" id="errorMessage"></p>
+    </div>
+
+    <script>
+        // Predefined admin credentials
+        const admins = {
+            "dipto": "2037",
+            "HSBadmin": "1994"
+            
+        };
+
+        function validateLogin() {
+            // Get the username and password from the input fields
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Debugging log to see the values
+            console.log("Username:", username);
+            console.log("Password:", password);
+
+            // Check if the credentials match
+            if (admins[username] && admins[username] === password) {
+                alert(`Welcome, ${username}!`);
+                // Redirect to Index2.html
+                window.location.href = "index2.html";
+            } else {
+                // Show error message
+                document.getElementById('errorMessage').textContent = "Invalid username or password.";
+            }
+        }
+    </script>
+</body>
+</html>

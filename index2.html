@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf2f8; /* Light blue background for a calming effect */
+            color: #2c3e50; /* Darker text for better readability */
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff; /* White background for form */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #1abc9c; /* Calming green border at the top */
+        }
+        h1 {
+            text-align: center;
+            color: #1abc9c; /* Green color for title */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #34495e; /* Darker shade for form title */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="text"], input[type="number"], textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            padding: 12px 20px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #16a085;
+        }
+        h3 {
+            text-align: center;
+            font-size: 18px;
+        }
+        a {
+            text-decoration: none;
+            color: #1abc9c;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hemophilia Society of Bangladesh</h1>
+        <h2>Patient Information Form</h2>
+
+        <form action="submit.php" method="post">
+            <label for="patient_name">Patient Name:</label>
+            <input type="text" id="patient_name" name="patient_name" required>
+            
+            <label for="patient_id">Patient ID:</label>
+            <input type="text" id="patient_id" name="patient_id" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="home_info">Home Information:</label>
+            <textarea id="home_info" name="home_info" required></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+
+        <h3><a href="admin.php">Go to Admin Panel</a></h3>
+    </div>
+</body>
+</html>

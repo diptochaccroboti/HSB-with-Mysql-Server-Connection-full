@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f2f4f8; /* Light gray background for a clean look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 360px;
+    padding: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.login-box h1 {
+    color: #d32f2f; /* Deep Red */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.login-box p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.role-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.role-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.patient-btn {
+    background-color: #d32f2f; /* Deep Red */
+}
+
+.admin-btn {
+    background-color: #1976d2; /* Blue */
+}
